@@ -20,6 +20,9 @@
     const coordsLon = data.coord.lon;
     const coordsLat = data.coord.lat;
 
+    document.body.style.backgroundImage =
+    "url('https://source.unsplash.com/1600x900/?" + cityOrCountry + "')"
+
     // London local time
     const date = new Date();
     const localTime = date.toLocaleTimeString("en-GB", { timeZone: 'Europe/London' });
@@ -125,6 +128,10 @@ btn.addEventListener(('click'), (event)=> {
     const sunset = data.sys.sunset;
     const coordsLon = data.coord.lon;
     const coordsLat = data.coord.lat;
+
+    document.body.style.backgroundImage =
+    "url('https://source.unsplash.com/1600x900/?" + cityOrCountry + "')"
+
 
     // London local time
         const date = new Date();
