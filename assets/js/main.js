@@ -1,25 +1,32 @@
 // https://openweathermap.org/guide
 
-let city = "passau";
+const btn = document.getElementById('btnSendUserInput');
 
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9733f699725f8f0e46844c1dcd6c1394&units=metric`)
-.then((response) => response.json())
-.then((data) => {
+btn.addEventListener(('click'), (event)=> {
+    event.preventDefault();
+
+    const cityOrCountry = document.getElementById('userInput').value;
+    console.log(cityOrCountry);
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityOrCountry}&appid=9733f699725f8f0e46844c1dcd6c1394&units=metric`)
+    .then((response) => response.json())
+    .then((data) => {
 
     console.log(data);
 
-
     const dataName = data.name;
+    const dataCountry = data.sys.country;
     const dataDescription = data.weather[0].description;
     const dataTemp = data.main.temp;
     const dataIcon = data.weather[0].icon;
     const dataPressure = data.main.pressure;
     const dataHumidity = data.main.humidity;
-    // const dataRain = data.rain["1h"];
     const dataCloudsAll = data.clouds.all;
     const dataWindSpeed = data.wind.speed;
     const dataWindDeg = data.wind.deg;
     const dataDt = data.dt;
+
+    console.log(dataCountry);
 
     // neues object mit den angeforderten daten
     const newObject = {
@@ -49,8 +56,12 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9733f6997
     const description = document.getElementById('description');
     description.innerText = dataDescription;
 
+    // country
+    const country = document.getElementById('country');
+    country.innerText = dataCountry;
 
-    // tabelle für ausgabe
+
+    // tabelle
     let tableForWeatherApp = document.getElementById('tableForWeatherApp');
 
     const table = document.createElement('table');
@@ -72,3 +83,4 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9733f6997
 
     tableForWeatherApp.appendChild(table);
     });
+});

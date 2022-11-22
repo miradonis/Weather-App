@@ -3,19 +3,61 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    color: white;
 }
 
+/*
+--------------------Input und Button
+*/
+
+article {
+    width: 20vw;
+    background-color: rgb(56, 56, 56);
+    margin: 10vh auto 0 auto;
+    padding: 2% 3%;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 1px 1px 20px blue;
+}
+
+#userInput {
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 3% 2%;
+    margin-bottom: 7%;
+    color: black;
+}
+
+#btnSendUserInput {
+    padding: 1% 0;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: black;
+    font-size: 1.2rem;
+}
+
+/*
+--------------------Wetteranzeige
+*/
 #tableForWeatherApp {
-    width: 18vw;
-    margin: 20vh auto 0 auto;
-    background-color: bisque;
+    width: 20vw;
+    height: 55vh;
+    margin: 0 auto 0 auto;
+    background-color: rgb(56, 56, 56);
     text-align: center;
-    padding: 2% 0;
-    border-radius: 10px;
+    padding: 1% 0;
+    box-shadow: 1px 1px 20px blue;
 }
 
 #city {
-    margin-bottom: 7%;
+    margin-bottom: 5%;
+    font-size: 1.8rem;
+}
+
+#country {
+    margin-bottom: 10%;
 }
 
 #iconAndTemp {
@@ -34,7 +76,7 @@
 
 #description {
     display: inline;
-    padding-bottom: 20%;
+    padding-bottom: 30%;
 }
 
 #tableForWeatherApp table {
@@ -42,9 +84,33 @@
     margin: 5% auto;
 }
 
+.tdLeft {
+    text-align: left;
+    padding-left: 2%;
+}
+
+.tdRight {
+    text-align: left;
+}
+
 table,
-th,
-td {
+tr {
     border: thin solid;
     height: 30px;
+}
+
+/*
+--------------------Footer
+*/
+
+footer {
+    width: 20vw;
+    background-color: rgb(56, 56, 56);
+    margin: 0 auto;
+    text-align: center;
+    font-size: .8rem;
+    padding: 3vh 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 1px 1px 20px blue;
 }
