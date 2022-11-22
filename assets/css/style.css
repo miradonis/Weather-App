@@ -13,7 +13,7 @@
 article {
     width: 20vw;
     background-color: rgb(56, 56, 56);
-    margin: 10vh auto 0 auto;
+    margin: 5vh auto 0 auto;
     padding: 2% 3%;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@ article {
 */
 #tableForWeatherApp {
     width: 20vw;
-    height: 55vh;
+    height: 65vh;
     margin: 0 auto 0 auto;
     background-color: rgb(56, 56, 56);
     text-align: center;
@@ -87,16 +87,23 @@ article {
 .tdLeft {
     text-align: left;
     padding-left: 2%;
+    border-right: 1px solid white;
 }
 
 .tdRight {
-    text-align: left;
+    text-align: right;
+}
+
+table {
+    border-collapse: collapse;
 }
 
 table,
 tr {
     border: thin solid;
-    height: 30px;
+    font-size: 1.2rem;
+    line-height: 30px;
+    padding: 0 3%;
 }
 
 /*
